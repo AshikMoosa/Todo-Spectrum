@@ -1,0 +1,12 @@
+1. Card
+   --Has Fixed Div called body and content which takes up some height but footer is slotted
+   --last-child selector not working inside component but outside sdom
+
+2. DataGrid
+   --Need to use component like sp-table-head (content and sp-table-body optional) else receive console error on query selector
+
+3. Icons
+   --Need to use component sp-icon-medium/large to add named icons
+   --sizes seems bit different from original documentation eg: cross300 vs cross75
+   --Cant break sp-icons-medium tag in multi line or add space btw tags throws console error
+   --No state styling works - hover, active, focus, ... can see changes from inspector

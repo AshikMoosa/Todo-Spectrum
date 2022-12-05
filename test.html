@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList - Spectrum</title>
+    <script src="https://jspm.dev/@spectrum-web-components/bundle/elements.js" type="module" async></script>
+
+
+
+    <style>
+
+
+       sp-icon:hover {
+            color: red;
+        }
+        sp-icon:active {
+            color: blue;
+        }
+        sp-icon:focus {
+            color: yellow;
+        }
+        sp-icon:focus-within {
+            color: green;            
+        }
+        sp-icon:focus-visible {
+            color: green;
+        }
+        #dumbledore:hover {
+            color: tomato;
+        }
+    </style>
+</head>
+
+<body>
+    <sp-theme scale="large" color="light">
+        <!-- <sp-button size="m">Medium</sp-button> -->
+            
+        <sp-icons-medium></sp-icons-medium>
+    
+        <!--?lit$216600087$-->
+                <!-- <sp-icon name="ui:Chevron200" size="s"></sp-icon>
+                <sp-icon name="ui:Cross100"></sp-icon>
+                <sp-icon name="ui:Chevron200" size="m"></sp-icon>
+            
+                <sp-icon name="ui:Chevron200" size="l"></sp-icon>
+            
+                <sp-icon name="ui:Chevron200" size="xl"></sp-icon>
+            
+                <sp-icon name="ui:Chevron200" size="xxl"></sp-icon> -->
+        <!-- <sp-icon
+        size="xxl"
+        label="Previous"
+        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0yOTU3Ljk5NSAtNTUzMC4wMzIgNiAxMCI+PGRlZnM+PHN0eWxlPi5he2ZpbGw6bm9uZTtzdHJva2U6IzE0NzNlNjtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6MTA7c3Ryb2tlLXdpZHRoOjJweDt9PC9zdHlsZT48L2RlZnM+PHBhdGggY2xhc3M9ImEiIGQ9Ik0yNTEuMywzMzNsNC00LTQtNCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTI3MDEuNjk1IC01MTk2LjAzMikgcm90YXRlKDE4MCkiLz48L3N2Zz4="
+    ></sp-icon> -->
+    
+    <sp-icon id="dumbledore" onmouseover="this.style.color='green'" onmouseout="this.style.color='red'" name="ui:Cross100" size="xxl"></sp-icon>
+    <sp-icon  name="ui:Cross200" size="s"></sp-icon>
+    <sp-icon name="ui:Cross300" size="s"></sp-icon>
+    <sp-icon name="ui:Cross400" size="s"></sp-icon>
+    <sp-icon name="ui:Cross500" size="s"></sp-icon>
+    <sp-icon name="ui:Cross600" size="s"></sp-icon>
+
+
+
+
+<br>
+<!-- <sp-table size="m"  selects="multiple">
+    <sp-table-head>
+    </sp-table-head>
+    <sp-table-body>
+        <sp-table-row value="row1">
+            <sp-table-cell>Row Item Alpha</sp-table-cell> 
+                  
+        </sp-table-row>
+        <sp-table-row value="row2">
+            <sp-table-cell>Row Item Bravo</sp-table-cell>
+        </sp-table-row>
+    </sp-table-body>
+</sp-table> -->
+
+
+
+<h1 onmouseover="this.style.color='green'" onmouseout="this.style.color='red'">Mouse Over</h1>
+    </sp-theme>
+   <script>
+    debugger;
+    document.querySelector('#dumbledore').addEventListener('click', () => {
+        console.log('inside add event')
+    });
+
+    document.querySelector('#dumbledore').onclick = () => {
+        console.log('inside onclick');
+    }
+    
+   </script>
+</body>
+
+</html>

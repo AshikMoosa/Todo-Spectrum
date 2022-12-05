@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList - Spectrum</title>
+    <script src="https://jspm.dev/@spectrum-web-components/bundle/elements.js" type="module" async></script>
+
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: lightblue;
+            background-image: url(./images//bg-desktop-dark.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        .main {
+            padding-top: 3em;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+        }
+
+       .form {
+        width: 100%;
+       }
+
+       sp-textfield, 
+       sp-card {
+        width: 100%;
+       }
+
+       .todo-list {
+        padding-top: 1em;
+        width: 100%;
+       }
+
+       sp-card p {
+        /* padding-top: 0.75em ; */
+        border-bottom: 1px solid var( --spectrum-card-m-border-color,var(--spectrum-global-color-gray-200) );
+        width: 330px;
+       }
+
+       sp-card p:last-child {
+        background: #ff0000;
+        }
+
+        sp-table-head {
+            display: none;
+        }
+        sp-table-row {
+            align-items: baseline;
+        }
+        sp-table-cell sp-icon {
+            vertical-align: bottom;
+            float: right;
+            z-index: 999;
+        }
+
+        sp-table-cell sp-icon:hover {
+            opacity: 0.2 !important;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <sp-theme scale="large" color="light">
+        <sp-icons-medium></sp-icons-medium>
+        <!-- <sp-button size="m">Medium</sp-button> -->
+            
+        <section class="main">
+            <div class="header">
+                <h1>TODO</h1>
+                <sp-icon src="./images/icon-moon.svg"></sp-icon>
+            </div>
+            <div class="form">
+                <sp-textfield id="name-0" placeholder="Create a new todo..."></sp-textfield>
+            </div>
+            <!-- <div class="todo-list">
+                <sp-card heading="" subheading="">
+               
+                    <p slot="subheading">Somedssdadasdas <hr> </p>
+                    <p slot="subheading">Some</p>
+                    <p slot="subheading">Some</p>
+                   
+                    <div slot="footer">5 items left</div>
+                </sp-card>
+            </div> -->
+            <div class="todo-list">
+                <sp-table size="m"  selects="multiple">
+                    <sp-table-head>
+                        <!-- <sp-table-head-cell>Column Title</sp-table-head-cell> -->
+                    </sp-table-head>
+                    <sp-table-body>
+                        <sp-table-row value="row1">
+                            <sp-table-cell>Row Item Alpha
+                                <sp-icon name="ui:Cross300" size="s"></sp-icon>
+                            </sp-table-cell> 
+                                  
+                        </sp-table-row>
+                        <sp-table-row value="row2">
+                            <sp-table-cell>Row Item Bravo
+                                <sp-icon name="ui:Cross300" size="s"></sp-icon>
+                            </sp-table-cell>
+                        </sp-table-row>
+                    </sp-table-body>
+                </sp-table>
+            </div>
+          
+        </section>
+       
+    </sp-theme>
+    <!-- <sp-icon name="ui:Cross300" size="s"></sp-icon> -->
+</body>
+
+</html>
